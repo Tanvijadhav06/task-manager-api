@@ -1,31 +1,35 @@
-#Task Manager REST API
+# Task Manager API 
 
-A simple REST API built using Flask to manage tasks.
+A REST API built using Flask to manage tasks, enhanced with AI-based features for smarter task handling.
 
-Features
-- Add new task
+ Features
+
+- Add new tasks
 - View all tasks
 - Update task status
 - Delete tasks
+- AI-based task priority detection (High / Medium / Low)
+- AI-generated summary of all tasks
 
 Tech Stack
+
 - Python
 - Flask
+- Hugging Face Transformers (NLP)
+- REST API
 
 API Endpoints
 
-GET /tasks  
-POST /tasks  
-PUT /tasks/<id>  
-DELETE /tasks/<id>
+- `GET /tasks` → Get all tasks  
+- `POST /tasks` → Create a new task (with AI priority detection)  
+- `PUT /tasks/<id>` → Update task status  
+- `DELETE /tasks/<id>` → Delete a task  
+- `GET /tasks/summary` → Get AI-generated summary of tasks  
 
-- How to Run
+## Example Request (POST /tasks)
 
-1. Install dependencies:
-pip install flask
-
-2. Run the app:
-python app.py
-
-3. Open:
-http://127.0.0.1:5000/tasks
+```json
+{
+  "title": "Fix bug",
+  "description": "Fix critical payment issue urgently"
+}
