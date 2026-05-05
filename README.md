@@ -26,10 +26,26 @@ API Endpoints
 - `DELETE /tasks/<id>` → Delete a task  
 - `GET /tasks/summary` → Get AI-generated summary of tasks  
 
-## Example Request (POST /tasks)
+# Example Request (POST /tasks)
 
 ```json
 {
   "title": "Fix bug",
   "description": "Fix critical payment issue urgently"
 }
+Example Response
+{
+  "id": 1,
+  "title": "Fix bug",
+  "description": "Fix critical payment issue urgently",
+  "priority": "HIGH",
+  "completed": false
+}
+
+Overview
+
+This project demonstrates how AI (Natural Language Processing) can be integrated into backend systems to automate task prioritization and generate insights from task data.
+
+Author
+
+Tanvi Jadhav
